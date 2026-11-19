@@ -72,7 +72,7 @@ Progress is stored in `localStorage` under `git-ease.progress.v1`. Clearing site
 
 `npm run build` produces a self-contained `dist/` folder. Because `vite.config.ts` uses `base: './'`, the same build works at a root domain or in a subfolder.
 
-- **GitHub Pages:** publish `dist/` to the `gh-pages` branch (or use an action) and enable Pages for that branch.
+- **GitHub Pages:** the included `.github/workflows/deploy.yml` builds and deploys `dist/` whenever you push to `main`. In the repository settings, set Pages' build and deployment source to **GitHub Actions**.
 - **Netlify / Cloudflare Pages / Vercel:** build command `npm run build`, publish directory `dist`.
 - **Any file host:** upload the contents of `dist/`.
 
